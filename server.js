@@ -12,25 +12,25 @@ const routes = require('./routes')
 
 //----------MiddleWare----------------
 // serve public assets making it available on every page
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
 //Init BodyParser
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 
 
 //-----------VIEW ROUTES-----------------
  app.use('/', routes.views);
 
-// //-----------API ROUTES-----------------
-app.use('/api', routes.api)
+//-----------API ROUTES-----------------
+// app.use('/api', routes.api)
 
-// //API Error 
+//API Error 
 // app.use('/api/*', (req,res) => {
 //     res.status(404).json({status: 404, error: 'Error 404: Resource not found'});
 // })
 
-// //HTML Error 
+//HTML Error 
 // app.use('*', (req,res) => {
 //     res.send('<h2>Error 404: Not Found</h2>')
 // })
