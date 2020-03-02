@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 //set up DB 
 const db = require('./models')
 
-// const routes = require('./routes')
+const routes = require('./routes')
 
 //----------MiddleWare----------------
 // serve public assets making it available on every page
@@ -17,8 +17,10 @@ const db = require('./models')
 //Init BodyParser
 // app.use(bodyParser.json());
 
+
+
 //-----------VIEW ROUTES-----------------
-// app.use('/', routes.views);
+ app.use('/', routes.views);
 
 //-----------API ROUTES-----------------
 // app.use('/api', routes.api)
