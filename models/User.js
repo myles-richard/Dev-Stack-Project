@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const Post = require('./Post');
 
 const UserSchema = new mongoose.Schema({
     name: String, 
@@ -7,7 +8,7 @@ const UserSchema = new mongoose.Schema({
     languages: [String],
     github: String,
     work: String, 
-    posts: [post.Schema],
+    posts: [Post.schema],
     photo: String,
 })
 
