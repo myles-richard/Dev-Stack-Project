@@ -8,6 +8,7 @@ body{
     width: 280px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 20%;
 
     top: 50%;
     /* left: 50%; */
@@ -38,7 +39,7 @@ body{
     border: none;
     outline: none;
     background: none;
-    color: yellow;
+    color: #f0ad4e;
     font-size: 18px;
     width: 210px;
     float: center;

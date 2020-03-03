@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const PostSchema = new mongoose.Schema({
     title: String, 
     description: String,
-    date: String, 
     comments: [String],
     likes: Number, 
     code: String, 
@@ -11,7 +10,7 @@ const PostSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'User'
     }
-})
+},{ timestamps: true })
 
 const Post = mongoose.model('Post', PostSchema)
 
