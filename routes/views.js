@@ -21,6 +21,10 @@ router.get('/javascript', (req,res) => {
     res.sendFile('views/JavascriptPostList.html', {root: __dirname + '/../'})
 })
 
+router.get('/createUser', (req,res) => {
+    res.sendFile('views/createUser.html', {root: __dirname + '/../'})
+})
+
 router.get('/newpost', (req,res) => {
     res.sendFile('views/createPost.html', {root: __dirname + '/../'})
 })
