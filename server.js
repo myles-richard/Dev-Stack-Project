@@ -12,7 +12,7 @@ const routes = require('./routes')
 
 //----------MiddleWare----------------
 // serve public assets making it available on every page
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 //Init BodyParser
  app.use(bodyParser.json());

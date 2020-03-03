@@ -1,11 +1,16 @@
-const db = require('express');
+const db = require('../models');
 
 const User = require('../models/User');
 
 
-// All users
-const index = (req,res) => {
-    res.send('testing users controller')
+// show users by ID
+const show = (req,res) => {
+    db.User.findById(req.params.id, (err, foundUser) => {
+        if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+    
+        res.json(foundUser);
+      });
+    // res.send('testing users controller')
 };
 
 //create user
@@ -20,7 +25,7 @@ const destroy = (req,res) => {
 
 
 module.exports = {
-    index,
+    show,
     create,
     destroy,
 }
