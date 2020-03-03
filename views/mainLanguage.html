@@ -3,14 +3,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" 
     content="width=device-width, initial-scale=1.0">
+    
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/9b565a5476.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Main CSS -->
     <link rel="stylesheet" href="/Users/ebonilla/Documents/GA/sei/projects/DevStack/public/styles/main.css">
-    <!-- Cities Index JS -->
-    <script defer src="../public/scripts/mainPage.js"></script>
+    <!--  JS -->
+    <script defer src="scripts/mainPage.js"></script>
+    <script defer src="scripts/createPost.js"></script>
     <title>DevStack</title>
 </head>
 <header>
@@ -26,9 +28,16 @@
               <li>
                 <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-warning my-2 my-sm-0 mr-2" type="submit"><i class="fas fa-search"></i></button>
-                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fas fa-user"></i></button>
                   </form>
+              </li>
+              <li>
+                <a href="/newpost"><button class="btn btn-outline-warning my-2 my-sm-0 mr-2">Create Post</button></a>
+              </li>
+              <li>
+                <button class="btn btn-outline-warning my-2 my-sm-0 mr-2 p-2" type="submit"><i class="fas fa-search"></i></button>
+              </li>
+              <li>
+                <button class="btn btn-outline-warning my-2 my-sm-0 p-2" type="submit"><i class="fas fa-user"></i></button>
               </li>
             </ul>
           </div>
