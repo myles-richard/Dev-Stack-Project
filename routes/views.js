@@ -12,13 +12,17 @@ router.get('/', (req,res) => {
 
 //Languages page
 router.get('/home', (req,res) => {
-    res.sendFile('views/newIndex.html', {
+    res.sendFile('views/mainLanguage.html', {
         root: __dirname + '/../'
     })
 })
 
 router.get('/javascript', (req,res) => {
     res.sendFile('views/JavascriptPostList.html', {root: __dirname + '/../'})
+})
+
+router.get('/newpost', (req,res) => {
+    res.sendFile('views/createPost.html', {root: __dirname + '/../'})
 })
 
 module.exports = router;

@@ -15,10 +15,10 @@ const show = (req,res) => {
 };  
 
 const create = (req,res) => {
-    const post = new Post({
+    const post = {
         title: req.body.title,
-        description: req.body.description
-    });
+        body: req.body.body,
+    };
     // res.send('testing create')
     res.json(post)
 };

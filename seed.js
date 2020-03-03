@@ -1,6 +1,7 @@
 //require models
 const db = require('./models')
 const Post = require('./models/Post')
+const User = require('./models/User')
 
 const newUsers = [
     {
@@ -35,22 +36,10 @@ const newUsers = [
     },
 ];
 
-const newPost = [{
-    title: 'My first JavaScript post', 
-    description: 'This is how you do a for loop',
-    date: '10/12/2020', 
-    comments: ['Thats cool', 'Thats really cool', 'Thanks for the answer'],
-    likes: '4', 
-    code: 'for( i = 0; i < something.length; i++ {console.log(i)})', 
-    // user: {
-    //     type: mongoose.Schema.Types.ObjectId, 
-    //     ref: 'User'
-    // }
-}]
 
 
 
-//remove all records
+// remove all records
 // db.User.deleteMany({}, (err, users) => {
 //     if(err) {
 //         console.log(err);
@@ -68,6 +57,19 @@ const newPost = [{
 //     process.exit();
 // });
 
+
+// const newPost = [{
+//     title: 'My second JavaScript post', 
+//     description: 'This is how you do a for require',
+//     date: '10/12/2020', 
+//     comments: ['chill', 'Thats really chill', 'cool'],
+//     likes: '4', 
+//     code: 'const require()', 
+//     // user: {
+//     //     type: mongoose.Schema.Types.ObjectId, 
+//     //     ref: 'User'
+//     // }
+// }]
 
 //remove all records
 // db.Post.deleteMany({}, (err, post) => {
@@ -88,18 +90,38 @@ const newPost = [{
 // });
 
 // REFRENCE ASSOCIATION BETWEEN POST AND USER
-db.User.findOne({firstName: 'Sonia'}, (err, foundUser) =>{
-    if(err){
-        console.log(err);
-        process.exit();
-    }
-})
+// User.findOne({name: 'Myles'}, (err, foundUser) =>{
+//     if(err){
+//         console.log(err);
+//         process.exit();
+//     }
+    
+//   Post.findOne({title: 'My second JavaScript post'}, (err, foundPost) => {
+//     if (err) {
+//       console.log(err);
+//       process.exit();
+//     }
 
-// EMBEDED REFRENCE BETWEEN POST AND USER
-db.User.findOne({firstName: 'Myles'}, (err,foundOne) =>{
-    Post.findOne({title: 'Post One'}, (err, foundPost) => {
+// // console.log(foundUser, foundPost);
 
-        foundUser.post.push(foundPost);
+// foundPost.user = foundUser._id;
+
+//     foundPost.save((err, savedPost) => {
+//       if (err) {
+//         console.log(err);
+//         process.exit();
+//       }
+
+//       console.log('Success', savedPost);
+//     });
+//   })
+// });
+
+// // EMBEDED REFRENCE BETWEEN POST AND USER
+User.findOne({name: 'Myles'}, (err,foundUser) =>{
+    Post.findOne({title: 'This is how you do a for require'}, (err, foundPost) => {
+        // console.log(foundUser, foundPost)
+        foundUser.posts.push(foundPost);
 
         foundUser.save((err, savedUser) => {
             console.log(savedUser)
