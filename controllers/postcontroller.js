@@ -2,17 +2,18 @@ const db = require('../models');
 const Post = require('../models/Post')
 
 const index = (req,res) => {
-    // db.Post.find({}, (err, allPosts) => {
-    //     if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+    db.Post.find({}, (err, allPosts) => {
+        if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
     
-    //     res.json(allPosts);
-    //   });
-    res.send('testing index')
+        res.json(allPosts);
+      });
+    // res.send('testing index')
 };
 
 const show = (req,res) => {
     res.send('testing show')
-};
+};  
+
 const create = (req,res) => {
     const post = new Post({
         title: req.body.title,
