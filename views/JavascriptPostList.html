@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="../public/styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- Cities Index JS -->
-    <script defer src="/public/scripts/mainPage.js"></script>
+    <script defer src="scripts/mainPage.js"></script>
+    <script defer src="scripts/createPost.js"></script>
     <title>DecStack</title>
 </head>
 <header>
@@ -156,11 +157,23 @@
                 <button type="button" class="btn btn-outline-warning float-right">save</button>
                 </div>
             </div>
-        </div>
+          </div>
 
 
           </div>
         </div>
+          
+            <section id="posts">
+              <form>
+                <label for="fname">Title:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Description:</label><br>
+                <input type="text" id="lastName" name="lname">
+                <label for="name">name:</label><br>
+                <input type="text" id="name" name="lname">
+                <button id="postBtn" type="submit" class="btn btn-outline-warning">submit</button>
+              </form>
+            </section>
     </body>
 </html>
 
