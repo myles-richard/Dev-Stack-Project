@@ -48,7 +48,6 @@ function render(posts){
     
     const postTemplate = getPostTemplate(posts);
     postsContainer.insertAdjacentHTML('beforeend', postTemplate)
-    // console.log(post)
 }
 
 function getPostTemplate(post) {
