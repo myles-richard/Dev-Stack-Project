@@ -3,56 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <script src="https://kit.fontawesome.com/8b12321ea8.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="/styles/createUser.css">
-
-    <script defer src="/createUser.js"></script>
+    
+    <script src="https://kit.fontawesome.com/8b12321ea8.js" crossorigin="anonymous"></script>
+    <script defer src="/scripts/createUser.js"></script>
+    <!-- <script defer src="/Lib/validate.js"></script> -->
     
     <title>Create Account</title>
 </head>
 <body>
-    <div class="login-box text-warning">
-        <h1 text-warning>Create Profile</h1>
-        <form id="new-form">
-        <div class="textbox text-warning">
-            <i class="fas fa-user"></i>
-            <input class="input-lg text-warning" type="string"  placeholder="Name" name="" value="">
+    <main class="container">
+        <div class="row">
+            <h1 class="text-warning text-center ">Create Profile</h1>
         </div>
-
-        <div class="textbox border-bottom-warning">
-            <i class="fas fa-at"></i>
-            <input class="input-lg text-warning"  type="email" placeholder="email" name="" value="">
+            <form id="new-form" class="needs-validation" novalidate>
+            <div class="textbox text-warning">
+                <i class="fas fa-user"></i>
+                <input id="name" class="form-control input-lg text-warning" type="text"  placeholder="Name" name="" value="">
+                <!-- <div class="invalid-feedback">
+                    missing name
+                  </div> -->
+            </div>
+    
+            <div class="textbox border-bottom-warning">
+                <i class="fas fa-at"></i>
+                <input id="email" class="input-lg text-warning"  type="email" placeholder="email" name="" value="">
+            </div>
+    
+            <div class="textbox border-bottom-warning">
+                <i class="fas fa-location-arrow"></i>
+                <input id="location" class="input-lg text-warning"  type="location" placeholder="Location" name="" value="">
+            </div>
+    
+            <div class="textbox border-bottom-warning">
+                <i class="fab fa-github"></i>
+                <input id="github" class="input-lg text-warning"  type="github" placeholder="Github Username" name="" value="">
+            </div>
+    
+            <div class="textbox border-bottom-warning">
+                <i class="fas fa-briefcase"></i>
+                <input id="work" class="input-lg text-warning"  type="work" placeholder="Work" name="" value="">
+            </div>
+    
+            <div class="textbox border-bottom-warning">
+                <i class="fas fa-keyboard"></i>
+                <input id="language" class="input-lg text-warning"  type="Language" placeholder="#javascript, #react" name="" value="">
+            </div>
+    
+            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Create</button>
+            </form>
+    
         </div>
-
-        <div class="textbox border-bottom-warning">
-            <i class="fas fa-location-arrow"></i>
-            <input class="input-lg text-warning"  type="location" placeholder="Location" name="" value="">
-        </div>
-
-        <div class="textbox border-bottom-warning">
-            <i class="fab fa-github"></i>
-            <input class="input-lg text-warning"  type="github" placeholder="Github Username" name="" value="">
-        </div>
-
-        <div class="textbox border-bottom-warning">
-            <i class="fas fa-briefcase"></i>
-            <input class="input-lg text-warning"  type="work" placeholder="Work" name="" value="">
-        </div>
-
-        <div class="textbox border-bottom-warning">
-            <i class="fas fa-keyboard"></i>
-            <input class="input-lg text-warning"  type="Languages" placeholder="#javascript, #react" name="" value="">
-        </div>
-
-        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Create</button>
-        </form>
-
-    </div>
+    </main>
+    
 
 </body>
 </html>
