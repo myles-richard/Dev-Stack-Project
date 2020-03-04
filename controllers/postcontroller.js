@@ -1,5 +1,4 @@
 const db = require('../models');
-const Post = require('../models/Post')
 
 const index = (req,res) => {
     db.Post.find({}, (err, allPosts) => {
@@ -7,20 +6,19 @@ const index = (req,res) => {
     
         res.json(allPosts);
       });
-    // res.send('testing index')
 };
 
 const show = (req,res) => {
-    // db.Post.find({}, (err, allPost) => {
-    //     if(err) return res.json(err)
+    db.Post.findById(req.params.id, (err, foundPost) => {
+        if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'});
 
-    //     res.json(allPost)
-    // })
+        res.json(foundPost)
+    })
 };  
 
 const create = (req,res) => {
     db.Post.create(req.body, (err, newPost) => {
-        if(err) return res.json(err)
+        if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'})
 
         res.json(newPost)
     })
@@ -28,13 +26,20 @@ const create = (req,res) => {
 };
 
 const update = (req,res) => {
-    res.send('testing update')
+    db.Post.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatePost) => {
+        if(err) return res.status(400).json({staus: 400, error: 'Something went wrong please try again'})
+
+        res.json(updatePost)
+    })
 };
 
 const destroy = (req,res) => {
-    res.send('testing destroy')
-}
+    db.Post.findByIdAndDelete(req.params.id, (err, deletedPost) => {
+        if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'});
 
+        res.json(deletedPost)
+    })
+}
 
 module.exports = {
     index,
