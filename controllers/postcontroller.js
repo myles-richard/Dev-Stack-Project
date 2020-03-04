@@ -11,16 +11,20 @@ const index = (req,res) => {
 };
 
 const show = (req,res) => {
-    res.send('testing show')
+    // db.Post.find({}, (err, allPost) => {
+    //     if(err) return res.json(err)
+
+    //     res.json(allPost)
+    // })
 };  
 
 const create = (req,res) => {
-    const post = {
-        title: req.body.title,
-        body: req.body.body,
-    };
-    // res.send('testing create')
-    res.json(post)
+    db.Post.create(req.body, (err, newPost) => {
+        if(err) return res.json(err)
+
+        res.json(newPost)
+    })
+   
 };
 
 const update = (req,res) => {
