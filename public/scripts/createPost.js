@@ -1,14 +1,17 @@
 console.log("sanity check");
 const postsContainer = document.querySelector('#posts');
-document.getElementById('postBtn').addEventListener('click', createPost);
+document.getElementById('newBtn').addEventListener('click', createPost);
 
 
 function createPost(e){
     e.preventDefault()
-    const title = document.querySelector('#fname').value
-    const body = document.querySelector('#lastName').value
+    
+    const title = document.querySelector('#posting').value
+    console.log(title)
+    const body = document.querySelector('#description').value
     const name = document.querySelector('#name')
     const newPost = {title, body, name};
+
     
 //     // const description = document.querySelector('#description').value
 //     // console.log(description);
@@ -48,7 +51,6 @@ function render(posts){
     
     const postTemplate = getPostTemplate(posts);
     postsContainer.insertAdjacentHTML('beforeend', postTemplate)
-    // console.log(post)
 }
 
 function getPostTemplate(post) {

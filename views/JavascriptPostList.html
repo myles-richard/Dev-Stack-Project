@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" 
     content="width=device-width, initial-scale=1.0">
+  
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- form stuff -->
+    
     <!-- Main CSS -->
     <link rel="stylesheet" href="styles/main.css">
+    
+
     <!-- Cities Index JS -->
     <script defer src="scripts/mainPage.js"></script>
     <script defer src="scripts/createPost.js"></script>
@@ -179,8 +184,10 @@
 
           </div>
         </div>
-          
-            <section id="posts">
+          <div id="newPost">
+
+          </div>
+            <!-- <section id="posts">
               <form>
                 <label for="fname">Title:</label><br>
                 <input type="text" id="fname" name="fname"><br>
@@ -190,7 +197,119 @@
                 <input type="text" id="name" name="lname">
                 <button id="postBtn" type="submit" class="btn btn-outline-warning">submit</button>
               </form>
-            </section>
+            </section> -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                          <h1>Create Post</h1>
+                        </div>
+                        <div class="modal-body">
+                        <section id="posts">
+                          <!-- <form>
+                            <label for="fname">Post Title:</label><br>
+                            <input type="text" id="posting" name="fname"><br>
+
+                            <label for="lname">Description:</label><br>
+                            <input type="text" id="description" name="lname"><br>
+
+                            <label for="name">Languages:</label><br>
+                            <input type="text" id="name" name="lname"><br>
+
+                            <label for="name">Code:</label><br>
+                            <input type="text" id="code" name="lname"><br>
+
+                          </form> -->
+
+                          <form action="">
+                            <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12 offset-3">
+     <div class="formden_header">
+      <h2>Create note</h2>
+      <p> </p>
+     </div>
+     <form method="post">
+      <div class="form-group ">
+       <label class="control-label requiredField" for="name">
+        Post title
+        <span class="asteriskField">
+         *
+        </span>
+       </label>
+       <div class="input-group">
+        <div class="input-group-addon">
+         <i class="fa fa-comment-o">
+         </i>
+        </div>
+        <input class="form-control" id="posting" name="name" placeholder="PostTitle " type="text"/>
+       </div>
+      </div>
+      <div class="form-group ">
+       <label class="control-label requiredField" for="description">
+        Description
+        <span class="asteriskField">
+         *
+        </span>
+       </label>
+       <textarea class="form-control" cols="40" id="description" name="description" placeholder="What does the code do" rows="10"></textarea>
+      </div>
+      <div class="form-group ">
+       <label class="control-label " for="language">
+        Language
+       </label>
+       <div class="input-group">
+        <div class="input-group-addon">
+         <i class="fa fa-map-signs">
+         </i>
+        </div>
+        <input class="form-control" id="language" name="language" placeholder="#javascript, #React" type="text"/>
+       </div>
+      </div>
+      <div class="form-group ">
+       <label class="control-label requiredField" for="codearea">
+        Code
+        <span class="asteriskField">
+         *
+        </span>
+       </label>
+       <textarea class="form-control text-warning" cols="40" id="codearea" name="codearea" rows="10"></textarea>
+      </div>
+      <div class="form-group">
+       <div>
+        <button id="createPostBtn" class="btn btn-warning btn-lg btn-block" name="submit" type="submit">
+         Create post
+        </button>
+       </div>
+      </div>
+     </form>
+    </div>
+   </div>
+  </div>
+ </div>
+                          </form>
+                        </section>
+                        </div>
+                        <div class="modal-footer">
+                            <input class="btn btn-warning" data-dismiss="modal"value="close">
+                            <input id="newBtn" class="btn btn-warning" data-dismiss="modal"value="Submit">
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+                  <a href="#" data-toggle="modal" data-target="#myModal">Open Modal</a>
+                </div>
+              </div>
+            </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
 
