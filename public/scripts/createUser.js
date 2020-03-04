@@ -1,1 +1,118 @@
-console.log('sanity check');
+console.log("hello");
+
+const form = document.querySelector('#new-form')
+console.log(form);
+form.addEventListener('submit', handleSubmit)
+
+function handleSubmit(event){
+    event.preventDefault()
+        let formIsValid = false;
+
+//select inputs 
+
+const name = document.getElementById('name')
+const email = document.getElementById('email')
+// const location = document.getElementById('location')
+// const github = document.getElementById('github')
+// const work = document.getElementById('work')
+// const language = document.getElementById('language')
+
+// error message
+const nameFeedback = document.querySelector('.name-feedback')
+const emailFeedback = document.querySelector('.email-feedback')
+// const locationFeedback = document.querySelector('.location-feedback')
+// const githubFeedback = document.querySelector('.github-feedback')
+// const workFeedback = document.querySelector('.work-feedback')
+// const languageFeedback = document.querySelector('.language-feedback')
+
+// reset validation classes and errors 
+
+name.classList.remove('is-invalid');
+email.classList.remove('is-invalid');
+// location.classList.remove('is-invalid');
+// github.classList.remove('is-invalid');
+// work.classList.remove('is-invalid');
+// language.classList.remove('is-invalid');
+
+nameFeedback && nameFeedback.remove();
+emailFeedback && emailFeedback.remove();
+// locationFeedback && locationFeedback.remove();
+// githubFeedback && githubFeedback.remove();
+// workFeedback && workFeedback.remove();
+// languageFeedback && languageFeedback.remove();
+
+
+
+if (!name.value) {
+    formIsValid = false;
+    name.classList.add('is-invalid');
+    name.parentNode.insertAdjacentHTML('beforeend', '<div class="invalid-feedback name-feedback">Name is required</div>');
+} else {
+    formIsValid = true;
+    lastName.classList.add('is-valid');
+}
+
+if (!email.value) {
+    formIsValid = false;
+    email.classList.add('is-invalid');
+    email.parentNode.insertAdjacentHTML('beforeend', '<div class="invalid-feedback email-feedback">Email is required</div>');
+} else {
+    formIsValid = true;
+    lastName.classList.add('is-valid');
+}
+
+
+
+
+if(formIsValid){
+    console.log('Submit this bad boy');
+    const newUser = {name: name.value}
+    console.log(newUser);
+
+    fetch('/api/users', {
+        method: 'POST',
+        headers:{
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+    })
+        .then ((stream)=> stream.json())
+        .then((res)=>{
+            if(res){
+                window.location = '/home'
+            }
+        })
+    .catch((err) => console.log(err))
+}
+
+}
+
+// var validator = new FormValidator('new-form', [{
+//     name: 'name',
+//     display: 'required',
+//     rules: 'required'
+// }, {
+//     name: 'email',
+//     rules: 'alpha_numeric'
+// }, {
+//     name: 'password',
+//     rules: 'required'
+// }, {
+//     name: 'password_confirm',
+//     display: 'password confirmation',
+//     rules: 'required|matches[password]'
+// }, {
+//     name: 'email',
+//     rules: 'valid_email',
+//     depends: function() {
+//         return Math.random() > .5;
+//     }
+// }, {
+//     name: 'minlength',
+//     display: 'min length',
+//     rules: 'min_length[8]'
+// }], function(errors, event) {
+//     if (errors.length > 0) {
+//         // Show the errors
+//     }
+// });
