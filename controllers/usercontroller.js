@@ -15,7 +15,11 @@ const show = (req,res) => {
 
 //create user
 const create = (req,res) => {
-    res.send('testing create')
+    db.User.create(req.body, (err, newUser) => {
+        if(err) return res.json(err)
+
+        res.json(newUser)
+    })
 }
 
 //delete user

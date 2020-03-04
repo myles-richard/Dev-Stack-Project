@@ -2,6 +2,8 @@ console.log("hello");
 
 const form = document.querySelector('#new-form')
 console.log(form);
+const create = document.getElementById('createPost')
+
 form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(event){
@@ -12,10 +14,10 @@ function handleSubmit(event){
 
 const name = document.getElementById('name')
 const email = document.getElementById('email')
-// const location = document.getElementById('location')
-// const github = document.getElementById('github')
-// const work = document.getElementById('work')
-// const language = document.getElementById('language')
+const location = document.getElementById('location')
+const github = document.getElementById('github')
+const work = document.getElementById('work')
+const language = document.getElementById('language')
 
 // error message
 const nameFeedback = document.querySelector('.name-feedback')
@@ -49,7 +51,7 @@ if (!name.value) {
     name.parentNode.insertAdjacentHTML('beforeend', '<div class="invalid-feedback name-feedback">Name is required</div>');
 } else {
     formIsValid = true;
-    lastName.classList.add('is-valid');
+    name.classList.add('is-valid');
 }
 
 if (!email.value) {
@@ -58,7 +60,7 @@ if (!email.value) {
     email.parentNode.insertAdjacentHTML('beforeend', '<div class="invalid-feedback email-feedback">Email is required</div>');
 } else {
     formIsValid = true;
-    lastName.classList.add('is-valid');
+    email.classList.add('is-valid');
 }
 
 
@@ -66,7 +68,14 @@ if (!email.value) {
 
 if(formIsValid){
     console.log('Submit this bad boy');
-    const newUser = {name: name.value}
+    const newUser = {
+        name: name.value,
+        email: email.value,
+        location: location.value,
+        github: github.value, 
+        work: work.value,
+        languages: language.value 
+    }
     console.log(newUser);
 
     fetch('/api/users', {
