@@ -78,7 +78,7 @@ if(formIsValid){
     }
     console.log(newUser);
 
-    fetch('/api/users', {
+    fetch('/api/v1/users/create', {
         method: 'POST',
         headers:{
             'Content-Type': 'application/json',

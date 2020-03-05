@@ -1,4 +1,6 @@
 module.exports = {
-    api: require('./api'),
-    views: require('./views')
+    views: require('./views'),
+    post: require('./post'),
+    user: require('./user'),
+    auth: require('./auth')
 }
