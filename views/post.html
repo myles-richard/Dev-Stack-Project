@@ -14,19 +14,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- -------CSS---------->
-    <link rel="stylesheet" href="../public/styles/post.css">
+    <link rel="stylesheet" href="/styles/post.css">
     
-    <title>Post</title>
-<body>		
+	<title>Post</title>
+	
+
+<body style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">		
 	<main class="container"> <!--This is main container-->
 
 
-		<div class="container bg-light border-left border-right border-top border-warning mt-3">
+		<div class="container bg-light border-left border-right border-top border-warning mt-3" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 			<div class="row">
 		
-				<div class="col-sm-12 col-md-6 col-lg-3 col-xl-5 pb-md-3 mt-sm-3"> 
+				<div class="col-sm-12 col-md-6 col-lg-5 col-xl-5  mt-sm-3"> 
 					<div class="card " style="">
-						<div class="card-body border border-warning shadow rounded bg-dark">
+						<div id="postcard" class="card-body border border-warning shadow rounded ">
 							<h3 class="card-title text-warning mb-4 ">Kesha Griffin</h3>
 							<h4 class="card-subtitle mb-2 text-warning">languages: #react, #Javascript, #ruby</h4>
 							<h4 class="card-subtitle mb-2 text-warning">location: San Francisco</h4>
@@ -37,38 +39,43 @@
 					</div>
 				</div>
 
-				<div class="container col-sm-12 col-md-6 col-lg-3 col-xl-7 pb-md-3 mt-sm-3">
+				<div class="container col-sm-12 col-md-6 col-lg-7 col-xl-7 pb-md-3 mt-sm-3">
 					<div id="title" class="pb-md-3 mt-sm-3"> 
 						<button type="button" class="btn btn-outline-warning float-right  mt-3">Delete </button>
 						<button type="button" class="btn btn-outline-warning float-right  mt-3">Edit</button>
 						<h1 class="display-6 text-center text-warning">For Loops</h1>
-						<h6 id="author" class="lead text-center text-dark">By Kesha Griffin.</h6>
-						<p>	Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati provident veniam! Iusto totam tempora atque velit nam itaque eum minima doloribus neque voluptate delectus quas, error beatae sit fugit recusandae corporis earum aperiam? Labore cum voluptatum itaque optio ex numquam vel, temporibus similique corporis harum 		sequi pariatu
+						<h6 id="author" class="lead text-center text-warning">By Kesha Griffin.</h6>
+						<p class="text-warning">	Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati provident veniam! Iusto totam tempora atque velit nam itaque eum minima doloribus neque voluptate delectus quas, error beatae sit fugit recusandae corporis earum aperiam? Labore cum voluptatum itaque optio ex numquam vel, temporibus similique corporis harum 		sequi pariatu
 						</p>
 					</div>
 				</div>
-			</div>	
-		</div>	
-		
-		<div class="container bg-light border-left border-right border-warning">
-			<div class="row">
 
-				<div id="box" class="col-sm-12 col-md-6 col-lg-3 col-xl-11 ml-5 pb-md-3 mt-sm-3">
-					<h1 class="card-title text-warning mb-2">Code</h1>
+			
+					<div id="box" class="Container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4 ">
+					<h1 class="card-title text-warning mb-2 mt-3">Code</h1>
 					<textarea class="text-warning border border-warning" name="" id="codearea" cols="30" rows="10" placeholder=""></textarea>
+				</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="container bg-light border-left border-right border-warning">
+
+
+
+
+			</div>	
+		</div>	
+		
+
+		<div class="container bg-light border-left border-right border-warning" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 			<div class="row">
 
 				<div class="container">
-					<div class="col-sm-12 col-md-6 col-lg-3 col-xl-12">
+					<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
 						<div id="commentBox" class="container ">
-							<div class="row comment-box-main p-3 rounded-bottom bg-secondary border border-warning ">
-								<div class="col-sm-12 col-md-6 col-lg-3 col-xl-12 pr-0 comment-box bg-secondary">
+							<div id="postcard"  class="row comment-box-main p-3 rounded-bottom border border-warning ">
+								<div id="postcard" class="col-sm-12 col-md-12 col-lg-12 col-xl-12 comment-box">
 									<textarea class="text-warning border border-warning bg-light" name="" id="codearea" cols="30" rows="6" placeholder="add to discussion"></textarea>
 									<button type="button" class="btn btn-outline-warning float-right  mt-3">Add comment</button>
 								</div>
@@ -80,14 +87,14 @@
 							<ul class="p-0">
 								<li>
 									<div class="row comments mb-2">
-										<div class="col-md-2 col-sm-2 col-3 text-center">
+										<div class="col-md-4 col-sm-2 col-3 text-center">
 
 										</div>
-									<div class="bg-light col-sm-12 col-md-6 col-lg-3 col-xl-10 comment rounded mt-3">
+									<div id="postcard" class=" col-sm-12 col-md-6 col-lg-10 col-xl-10 comment rounded pt-2 pb-2 mt-3 border border-warning">
 										<h4 class="m-0"><a href="#">Jacks David</a></h4>
-										<time class="text-warning ml-3">1 hours ago</time>
+										<time class="text-warning ml-5">1 hours ago</time>
 										<like></like>
-										<p class="mb-0 text-warning">Thank you for visiting all the way from New York.</p>
+										<p class="mb-0 text-warning mt-3">Awesome code, thanks for posting.</p>
 									</div>
 									</div>
 								</li>

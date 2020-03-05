@@ -29,4 +29,8 @@ router.get('/newpost', (req,res) => {
     res.sendFile('views/createPost.html', {root: __dirname + '/../'})
 })
 
+router.get('/post', (req,res) => {
+    res.sendFile('views/post.html', {root: __dirname + '/../'})
+})
+
 module.exports = router;

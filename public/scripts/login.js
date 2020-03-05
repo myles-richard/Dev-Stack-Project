@@ -8,13 +8,13 @@ document.querySelector('form').addEventListener('submit',(event)=>{
    const some = { name, password}
    console.log(some);
    fetch('/api/v1/auth', {
-    method: 'GET',
+    method: 'POST',
     headers: {
         'Content-Type': 'application/json',
     },
     body: JSON.stringify(some)
 })
-  .then(stream => stream.json())
-  .then(res => render(res))
+  // .then(stream => stream.json())
+  // .then(res => render(res))
 
 });
