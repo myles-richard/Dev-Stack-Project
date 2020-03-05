@@ -18,11 +18,23 @@ const show = (req,res) => {
 };  
 
 const create = (req,res) => {
-    console.log(req.session.user)
+    
     db.Post.create(req.body, (err, newPost) => {
         if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'})
 
-        res.json(newPost)
+        db.User.findById(req.session.user, (err,foundUser) => {
+            if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+
+            foundUser.posts.push(newPost);
+
+            foundUser.save((err, savedUser) => {
+                if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+
+
+                res.json(newPost)
+            })
+        })
+        console.log(req.session.user)
     })
    
 };

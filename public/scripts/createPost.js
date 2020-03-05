@@ -1,3 +1,4 @@
+
 console.log("sanity check");
 const postsContainer = document.querySelector('#postlist');
 document.getElementById('newBtn').addEventListener('click', createPost);
@@ -14,6 +15,7 @@ function createPost(e){
     console.log(languages)
     const code = document.querySelector('#codearea').value
     console.log(code)
+    
     const newPost = {title, body, languages, code };
 
     
