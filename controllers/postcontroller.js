@@ -30,11 +30,18 @@ const create = (req,res) => {
             foundUser.save((err, savedUser) => {
                 if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
 
-
-                res.json(newPost)
+                let resObj = {
+                    _id: newPost._id,
+                    title: newPost.title,
+                    description: newPost.description,
+                    languages: newPost.languages,
+                    code: newPost.code,
+                    name: foundUser.name                    
+                };
+                console.log(resObj);
+                res.json(resObj)
             })
         })
-        console.log(req.session.user)
     })
    
 };
