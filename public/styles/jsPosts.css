@@ -1,3 +1,7 @@
 body{
     background-image: url("../images/login-background.png");
 }
+#postcard{
+    background: black;
+    opacity: 0.9;
+}
