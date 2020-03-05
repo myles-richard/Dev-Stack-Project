@@ -1,5 +1,5 @@
 console.log("sanity check");
-const postsContainer = document.querySelector('#posts');
+const postsContainer = document.querySelector('#newPost');
 document.getElementById('newBtn').addEventListener('click', createPost);
 
 
@@ -9,8 +9,12 @@ function createPost(e){
     const title = document.querySelector('#posting').value
     console.log(title)
     const body = document.querySelector('#description').value
-    const name = document.querySelector('#name')
-    const newPost = {title, body, name};
+    console.log(body)
+    const languages = document.querySelector('#language').value
+    console.log(languages)
+    const code = document.querySelector('#codearea').value
+    console.log(code)
+    const newPost = {title, body, languages, code };
 
     
 //     // const description = document.querySelector('#description').value

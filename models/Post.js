@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const PostSchema = new mongoose.Schema({
     title: String, 
     description: String,
+    languages: String,
     comments: [String],
     likes: Number, 
     code: String, 
