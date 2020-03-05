@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 const bodyParser = require('body-parser');
+const sessions = require('express-session')
 
 const PORT = process.env.PORT || 4000;
 
@@ -13,6 +14,11 @@ const routes = require('./routes')
 //----------MiddleWare----------------
 // serve public assets making it available on every page
 app.use(express.static(__dirname + '/public'));
+app.use(sessions({
+    secret: 'who',
+    resave: true,
+    saveUninitialized: false,
+}))
 
 //Init BodyParser
  app.use(bodyParser.json());
