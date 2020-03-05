@@ -8,29 +8,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/log-in.css">
     <script src="https://kit.fontawesome.com/8b12321ea8.js" crossorigin="anonymous"></script>
-    <script defer src="/scripts/createPost.js"></script>
+    <script defer src="/scripts/login.js"></script>
     
     <title>log-in</title>
 </head>
 <body>
+<<<<<<< HEAD
        
+=======
+    <!-- <form action="/auth" method="GET"> -->
+    <form>
+>>>>>>> submaster
     <div class="login-box text-warning">
         <h1 text-warning>Login</h1>
         <div class="textbox text-warning">
             <i class="fas fa-user"></i>
-            <input class="input-lg text-warning" type="Username"  placeholder="Username" name="" value="">
+            <input id="name" class="input-lg text-warning" type="Username"  placeholder="Username" name="" value="">
         </div>
 
         <div class="textbox border-bottom-warning">
             <i class="fas fa-lock"></i>
-            <input class="input-lg text-warning"  type="password" placeholder="Password" name="" value="">
+            <input id="password" class="input-lg text-warning"  type="password" placeholder="Password" name="" value="">
         </div>
 
-        <a href="/home"><button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Login</button></a>
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Login</button>
         
         <a href="/createUser"><button class="btn btn-outline-warning my-2 my-sm-0" type="submit">create</button></a>
 
     </div>
-
+</form>
 </body>
 </html>

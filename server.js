@@ -23,7 +23,10 @@ app.use(express.static(__dirname + '/public'));
  app.use('/', routes.views);
 
 // -----------API ROUTES-----------------
-app.use('/api', routes.api)
+app.use('/api/v1/users', routes.user)
+app.use('/api/v1/posts', routes.post)
+app.use('/api/v1', routes.auth)
+
 
 // API Error 
 app.use('/api/*', (req,res) => {

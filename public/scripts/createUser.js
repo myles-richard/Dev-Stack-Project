@@ -74,11 +74,12 @@ if(formIsValid){
         location: location.value,
         github: github.value, 
         work: work.value,
-        languages: language.value
+        languages: language.value,
+        password: 1234
     }
     console.log(newUser);
 
-    fetch('/api/users', {
+    fetch('/api/v1/users/create', {
         method: 'POST',
         headers:{
             'Content-Type': 'application/json',
