@@ -1,5 +1,5 @@
 console.log("sanity check");
-const postsContainer = document.querySelector('#newPost');
+const postsContainer = document.querySelector('#postlist');
 document.getElementById('newBtn').addEventListener('click', createPost);
 
 
@@ -39,7 +39,7 @@ function createPost(e){
 // //     .then(stream => stream.json())
 // //     .then(res => render(res))
 // // }
-fetch('/api/posts', {
+fetch('/api/v1/posts/create', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -59,17 +59,17 @@ function render(posts){
 
 function getPostTemplate(post) {
     return `
-    <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-            <div class="card" style=" width: 16rem;">
-                <div class="card-body border border-warning shadow rounded bg-dark">
-                <h5 class="card-title text-warning">${post.title}</h5>
-                <h6 class="card-subtitle mb-4 text-light">${post.name}</h6>
-                <p class="card-text text-warning">${post.body}</p>
-                <a href="#" class="card-link">save</a>
-                <button type="button" class="btn btn-outline-warning float-right">save</button>
-                </div>
-            </div>
-          </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3"> 
+    <div class="card">
+        <div id="postcard" class="card-body border border-warning rounded">
+        <h5 class="card-title text-warning">${post.title}</h5>
+        <h6 class="card-subtitle mb-4 text-light">${post.name}</h6>
+        <p class="card-text text-warning">${post.body}</p>
+        
+        <button type="button" class="btn btn-outline-warning float-right">save</button>
+        </div>
+    </div>
+</div>
     
     `;
 }

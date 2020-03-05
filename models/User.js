@@ -4,6 +4,7 @@ const Post = require('./Post')
 const UserSchema = new mongoose.Schema({
     name: String, 
     email: String,
+    password: String,
     location: String, 
     github: String,
     work: String, 
