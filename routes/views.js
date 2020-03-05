@@ -12,6 +12,7 @@ router.get('/', (req,res) => {
 
 //Languages page
 router.get('/home', (req,res) => {
+    console.log('res')
     res.sendFile('views/mainLanguage.html', {
         root: __dirname + '/../'
     })

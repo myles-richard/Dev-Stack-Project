@@ -9,6 +9,7 @@ const index = (req,res) => {
 };
 
 const show = (req,res) => {
+    // db.User.findById(req.session.user)
     db.Post.findById(req.params.id, (err, foundPost) => {
         if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'});
 
@@ -17,17 +18,37 @@ const show = (req,res) => {
 };  
 
 const create = (req,res) => {
+    
     db.Post.create(req.body, (err, newPost) => {
         if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'})
 
-        res.json(newPost)
+        db.User.findById(req.session.user, (err,foundUser) => {
+            if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+
+            foundUser.posts.push(newPost);
+
+            foundUser.save((err, savedUser) => {
+                if (err) return res.status(400).json({status: 400, error: 'Something went wrong, please try again'});
+
+                let resObj = {
+                    _id: newPost._id,
+                    title: newPost.title,
+                    description: newPost.description,
+                    languages: newPost.languages,
+                    code: newPost.code,
+                    name: foundUser.name                    
+                };
+                console.log(resObj);
+                res.json(resObj)
+            })
+        })
     })
    
 };
 
 const update = (req,res) => {
     db.Post.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatePost) => {
-        if(err) return res.status(400).json({staus: 400, error: 'Something went wrong please try again'})
+        if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'})
 
         res.json(updatePost)
     })

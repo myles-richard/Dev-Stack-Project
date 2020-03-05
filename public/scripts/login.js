@@ -14,7 +14,12 @@ document.querySelector('form').addEventListener('submit',(event)=>{
     },
     body: JSON.stringify(some)
 })
-  // .then(stream => stream.json())
-  // .then(res => render(res))
+  .then(stream => stream.json())
+  .then(data => {
+      if (data.status === 201) {
+          window.location = '/home'
+      }
+  })
+  
 
 });

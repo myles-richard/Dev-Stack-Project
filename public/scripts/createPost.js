@@ -1,3 +1,4 @@
+
 console.log("sanity check");
 const postsContainer = document.querySelector('#postlist');
 document.getElementById('newBtn').addEventListener('click', createPost);
@@ -8,13 +9,14 @@ function createPost(e){
     
     const title = document.querySelector('#posting').value
     console.log(title)
-    const body = document.querySelector('#description').value
-    console.log(body)
+    const description = document.querySelector('#description').value
+    console.log(description)
     const languages = document.querySelector('#language').value
     console.log(languages)
     const code = document.querySelector('#codearea').value
     console.log(code)
-    const newPost = {title, body, languages, code };
+    
+    const newPost = {title, description, languages, code };
 
     
 //     // const description = document.querySelector('#description').value
@@ -64,7 +66,7 @@ function getPostTemplate(post) {
         <div id="postcard" class="card-body border border-warning rounded">
         <h5 class="card-title text-warning">${post.title}</h5>
         <h6 class="card-subtitle mb-4 text-light">${post.name}</h6>
-        <p class="card-text text-warning">${post.body}</p>
+        <p class="card-text text-warning">${post.description}</p>
         
         <button type="button" class="btn btn-outline-warning float-right">save</button>
         </div>
