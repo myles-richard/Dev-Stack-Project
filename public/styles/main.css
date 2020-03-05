@@ -1,3 +1,7 @@
 .body{
     background-color: grey;
 }
+#postcard{
+    background: black;
+    opacity: 0.9;
+}

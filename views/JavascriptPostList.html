@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- form stuff -->
     
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="/Users/ebonilla/Documents/GA/sei/projects/DevStack/public/styles/jsPosts.css">
     
     
     <!-- Cities Index JS -->
@@ -20,21 +18,24 @@
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script defer src="scripts/mainPage.js"></script>
     <script defer src="scripts/createPost.js"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/styles/jsPosts.css">
     <title>DecStack</title>
 </head>
 <header>
     
-  <nav class="navbar navbar-expand-md pt-3 pb-3 border-bottom bg-dark">
+  <nav id="postcard" class="navbar navbar-expand-md pt-3 pb-3">
         
     <a class="navbar-brand text-warning" href="/">{ ' DevStack ' }</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon border border-warning"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto">
         <li>
           <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <input id="postcard" class="form-control mr-sm-2 border border-warning" type="search" placeholder="Search" aria-label="Search">
             </form>
         </li>
         <li>
@@ -48,14 +49,14 @@
                         <h1>Create Post</h1>
                       </div>
                       <div class="modal-body">
+
                       <section id="posts">
-                      
                           <form action="">
                             <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
                           <div class="bootstrap-iso">
                             <div class="container-fluid">
                             <div class="row">
-                              <div class="col-md-6 col-sm-6 col-xs-12 offset-3">
+                              <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3 offset-3">
                               <div class="formden_header">
                                 <h2>Create note</h2>
                                 <p> </p>
@@ -109,7 +110,7 @@
                                 <div class="form-group">
                                 <div>
                                   <button id="createPostBtn" class="btn btn-warning btn-lg btn-block" name="submit" type="submit">
-                                  Create post
+                                  Create posdafst
                                   </button>
                                 </div>
                                 </div>
@@ -145,12 +146,12 @@
 </nav>
 </header>
 
-<body class="" style="background-image: url('/Users/ebonilla/Documents/GA/sei/projects/DevStack/public/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+<body class="" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
 
-  <div class="container border-left border-right border-warning pt-3">
-    <div class="card border border-warning p-1 mb-3 rounded">
-      <h1 class="card-body display-3 text-center text-warning ">
-        JavaScript.
+  <div class="container border-left border-right border-top border-warning mt-2 pt-3">
+    <div class="card border border-warning p-1 mb-3 rounded" style="background-image: url('/images/login-background.png');">
+      <h1 class="card-body display-4 text-center text-warning ">
+        JavaScript
       </h1>
     </div>
 
@@ -173,11 +174,13 @@
     </div>
   </div>
 
-      <div class="container border-left border-right border-warning shadow-lg">
-          <div class="row">
-              <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-                  <div class="card" style=" width: 16rem;">
-                      <div class="card-body border border-warning shadow rounded bg-dark">
+      <div class="container border-left border-right border-warning shadow-lg"> <!--THis is the main box with the post-->
+          <div id="postlist" class="row border-bottom border-warning mb-3">
+                
+            <!--This is the posts-->
+              <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3"> 
+                  <div class="card">
+                      <div id="postcard" class="card-body border border-warning rounded">
                       <h5 class="card-title text-warning">For Loops</h5>
                       <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
                       <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
@@ -186,10 +189,12 @@
                       </div>
                   </div>
               </div>
-
-              <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-                <div class="card" style=" width: 16rem;">
-                    <div class="card-body border border-warning shadow rounded bg-dark">
+                    <!--this is were post ends -->
+              
+              
+                    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3"> 
+                <div class="card">
+                    <div id="postcard" class="card-body border border-warning shadow rounded ">
                     <h5 class="card-title text-warning">For Loops</h5>
                     <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
                     <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
@@ -198,9 +203,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-              <div class="card" style=" width: 16rem;">
-                  <div class="card-body border border-warning shadow rounded bg-dark">
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3"> 
+              <div class="card">
+                  <div id="postcard" class="card-body border border-warning shadow rounded">
                   <h5 class="card-title text-warning">For Loops</h5>
                   <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
                   <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
@@ -209,9 +214,9 @@
               </div>
           </div>
 
-          <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-            <div class="card" style=" width: 16rem;">
-                <div class="card-body border border-warning shadow rounded bg-dark">
+          <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3"> 
+            <div class="card">
+                <div id="postcard" class="card-body border border-warning shadow rounded ">
                 <h5 class="card-title text-warning">For Loops</h5>
                 <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
                 <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
@@ -220,65 +225,17 @@
             </div>
         </div>
 
-
+    
           </div>
         </div>
 
-        <div class="container border-left border-right border-warning">
-          <div class="row">
-              <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-                  <div class="card" style=" width: 16rem;">
-                      <div class="card-body border border-warning shadow rounded bg-dark">
-                      <h5 class="card-title text-warning">For Loops</h5>
-                      <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
-                      <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
-                      <button type="button" class="btn btn-outline-warning float-right">save</button>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-                <div class="card" style=" width: 16rem;">
-                    <div class="card-body border border-warning shadow rounded bg-dark">
-                    <h5 class="card-title text-warning">For Loops</h5>
-                    <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
-                    <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
-                    <button type="button" class="btn btn-outline-warning float-right">save</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-              <div class="card" style=" width: 16rem;">
-                  <div class="card-body border border-warning shadow rounded bg-dark">
-                  <h5 class="card-title text-warning">For Loops</h5>
-                  <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
-                  <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
-                  <button type="button" class="btn btn-outline-warning float-right">save</button>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-md-3 pb-md-3 mt-sm-3 "> 
-            <div class="card" style=" width: 16rem;">
-                <div class="card-body border border-warning shadow rounded bg-dark">
-                <h5 class="card-title text-warning">For Loops</h5>
-                <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
-                <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
-                <button type="button" class="btn btn-outline-warning float-right">save</button>
-                </div>
-            </div>
-          </div>
-
-
-          </div>
-        </div>
+        
             
-        <footer class="bg-dark text-center text-warning pt-4 pb-4">
-          <p class="mb-0">{ ' DevStack ' } by Myles & Eduardo</p>
-      </footer>
+<footer class="bg-dark text-center text-warning pt-4 pb-4">
+  <p class="mb-0">{ ' DevStack ' } by Myles & Eduardo</p>
+</footer>
 
-          </body>
+</body>
 </html>
           
           
