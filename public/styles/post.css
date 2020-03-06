@@ -1,0 +1,23 @@
+#paragraph{
+    width: 450px;
+}
+#box{
+    width: 60%;
+}
+h1{
+    width: 200px;
+}
+#author{
+    width: 190px;
+}
+#codearea{
+    font-family: 'Inconsolata', monospace;
+    width:100%;
+    margin:5px 0;
+    padding:3px;
+    background-color: black;
+}
+#postcard{
+  background: black;
+  opacity: 0.9;
+}

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/9b565a5476.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- form stuff -->
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/styles/jsPosts.css">
+    
+    
+    <!-- Cities Index JS -->
+    <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script defer src="scripts/javaScript.js"></script>
+    <script defer src="scripts/createPost.js"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/styles/jsPosts.css">
+    <title>JavaScript</title>
+</head>
+<header>
+ 
+<nav id="postcard" class=" navbar navbar-expand-md pt-3 pb-3">
+        
+  <a class="navbar-brand text-warning" href="/home">{ ' DevStack ' }</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li>
+        <a class="btn btn-outline-warning my-2 my-sm-0 mr-2"href="#" data-toggle="modal" data-target="#myModal">Create Post</a>
+      </li>
+      <li>
+        <form class="form-inline">
+            <input  class="form-control mr-sm-2 border border-warning bg-dark" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </li>
+      <li>
+        <button class="btn btn-outline-warning my-2 my-sm-0 mr-2 p-2" type="submit"><i class="fas fa-search"></i></button>
+      </li>
+      <li>
+        <button class="btn btn-outline-warning my-2 my-sm-0 p-2" type="submit"><i class="fas fa-user"></i></button>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+
+
+</header>
+
+<body id="postcard" class="" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+  <div class="container border-left border-right border-top border-warning mt-2 pt-3">
+    <div class="card border border-warning p-1 mb-3 rounded" style="background-image: url('/images/login-background.png');">
+      <h1 class="card-body display-4 text-center text-warning ">
+        JavaScript
+      </h1>
+    </div>
+
+
+        <ul class="nav justify-content-center pb-md-1 mt-sm-1">
+          <li class="nav-item ">
+            <a class="nav-link active text-warning" href="#">Today</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-warning" href="#">Week</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-warning" href="#">Month</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-warning" href="#" tabindex="-1" aria-disabled="true">Top</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="container border-left border-right border-warning shadow-lg"> <!--THis is the main box with the post-->
+  <div id="postlist" class="row border-bottom border-warning mb-3">
+        
+    <!--This is the posts-->
+
+        <!--Button trigger modal -->
+      <button type="button" class="btn col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3" data-toggle="modal" data-target="#kesha">
+        <div class="container ">
+
+                    <!--Button trigger modal -->
+            <div class=""> 
+              <div class="card ">
+                  <div id="postcard" class="card-body border border-warning rounded ">
+                  <h5 class="card-title text-warning">For Loops</h5>
+                  <h6 class="card-subtitle mb-4 text-light">Sonia</h6>
+                  <p class="card-text text-warning">examples to do a afasfasfasdfsdaf saf .</p>
+                  <div>
+              </div>
+            </div>
+          </div>
+      </button>
+      
+
+      <!-- Modal for post----------------------------------------------->
+      <div class="modal fade bd-example-modal-md" id="kesha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="">
+          <div class="modal-content">
+            <div class="modal-body" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+
+              <!--content inside the pop box-->
+                
+              <main class="container border border-warning mt-3"> <!--This is main container-->
+
+                <div class="container-fluid mt-3 ">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="row">
+              
+              
+                        <div class="col-md-4 col-lg-5">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="card bg-dark text-warning border border-warning">
+                                    <div class="card-body">
+                                      <h3>
+                                        Kesha
+                                      </h3>
+                                      <ul>
+                                        <li class="list-item">
+                                          languages: #react, #Javascript
+                                        </li>
+                                        <li class="list-item">
+                                          location: San Francisco
+                                        </li>
+                                        <li class="list-item">
+                                          Github: ngriffin23
+                                        </li>
+                                        <li class="list-item">
+                                          work: General Assembly
+                                        </li>
+                                      </ul>
+              
+                                      <button type="button" class="btn btn-warning j">
+                                        Follow +
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+              
+              
+                        <div class="col-md-8 col-lg-7 text-warning">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <!--empty column-->
+                                </div>
+                                <div class="col-md-6">
+                                  <!-- <a class="btn btn-outline-warning my-2 my-sm-0 mr-2" href="#" data-toggle="modal" data-target="#edit-modal"></a> -->
+                                  <button id="editpost" type="button" data-target="edit-modal" class="btn btn-warning">
+                                    Edit
+                                  </button>
+                                  <button id="deletepost" type="button" class="btn btn-warning btn-md">
+                                    Delete
+                                  </button>
+                                </div>
+                              </div>
+                              <h3 id="post-title" class="text-left">
+                                While loop for even numbers
+                              </h3>
+                              <h6 class="text-left">
+                                by Kesha Griffin
+                              </h6>
+                              <dl>
+                                <dt>
+                                  <u> Description </u>
+                                </dt>
+                                <dd>
+                                  <span id="post-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe consequatur ad omnis amet porro! Eius corrupti totam amet est dolores ducimus sit cupiditate quis doloribus asperiores, expedita soluta ut illo neque ratione consequatur libero maxime, ab magnam </span>
+                                </dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="row text-warning">
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                              <h3>
+                                Code
+                              </h3>
+                              <blockquote class="blockquote">
+                                  <textarea id="post-code" class="text-warning border border-warning bg-dark col-lg-12" name="" id="codearea" cols="30" rows="6" placeholder=""></textarea>
+                              </blockquote> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="row text-warning">
+                        <div class="col-md-12">
+                          <h3>
+                            Add a comments.
+                          </h3>
+                          <dl>
+                            <dt>
+                              <div id="commentBox" class="container ">
+                                <div id="postcard"  class="row comment-box-main p-3 rounded-bottom border border-warning ">
+                                  <div id="postcard" class="col-sm-12 col-md-12 col-lg-12 col-xl-12 comment-box">
+                                    <textarea class="text-warning border border-warning bg-light col-lg-12" name="" id="codearea" cols="30" rows="6" placeholder="add to discussion"></textarea>
+                                    <button type="button" class="btn btn-outline-warning float-right  mt-3">Add comment</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </dt>
+                            <dd>
+                              <div id="postcard" class=" col-sm-12 col-md-6 col-lg-10 col-xl-10 comment rounded pt-2 pb-2 mt-3 border border-warning">
+                                <h4 class="m-0"><a href="#">Jacks David</a></h4>
+                                <time class="text-warning ml-5">1 hours ago</time>
+                                <like></like>
+                                <p class="mb-0 text-warning mt-3">Awesome code, thanks for posting.</p>
+                              </div>
+                            </dd>
+                          </dl>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </main>
+
+              <!--END OF CONTENT BOX-->
+  
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+  </div>
+      
+
+
+
+
+
+
+
+            <!--this is were post ends -->
+
+  </div>
+        </div>
+
+<!--comment testing -->
+
+
+
+
+
+<!-- MODAL for the create bottom -->
+<div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog model-lg">
+    <div class="modal-content">
+
+      <div class="modal-header text-warning border border-warning" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <h1>Create Post</h1>
+      </div>
+
+    <div class="modal-body border border-warning" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <section id="posts">
+        <form action="">
+            <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+          <div class="bootstrap-iso">
+
+            <div class="container ">
+              <div class="row">
+                  
+                <div class="pb-md-3 mt-sm-3 offset-1">
+              
+                  <form method="post">
+
+                    <div class="form-group">
+                      <label class="control-label requiredField text-warning" for="name">
+                          Post title
+                        <span class="asteriskField">*</span>
+                      </label>
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                         
+                        </div>
+                        <input class="form-control  border border-warning bg-dark text-warning" id="posting" name="name" placeholder="PostTitle" type="text"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group ">
+                      <label class="control-label requiredField text-warning" for="description">
+                          Description
+                        <span class="asteriskField">*</span>
+                      </label>
+                      <textarea class="form-control border border-warning bg-dark text-warning" cols="40" id="description" name="description" placeholder="What does the code do" rows="10"></textarea>
+                    </div>
+
+                    <div class="form-group ">
+                      <label class="control-label text-warning " for="language">Language</label>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                          </div>
+                          <input class="form-control border border-warning bg-dark text-warning" id="language" name="language" placeholder="#javascript, #React" type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                      <label class="control-label requiredField text-warning" for="codearea">
+                        Code
+                        <span class="asteriskField">*</span>
+                      </label>
+                      <textarea class="form-control text-warning border border-warning bg-dark" cols="40" id="codearea" name="codearea" rows="10" placeholder="let awesome = {'DevStack'}"></textarea>
+                    </div>
+                    <div class="form-group"></div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="modal-footer justify-content-center border border-warning" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <input class="btn btn-warning " data-dismiss="modal"value="close">
+      <input id="newBtn" class="btn btn-warning" data-dismiss="modal"value="Submit">
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<!--edit modal -->
+
+<div id="edit-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog model-lg">
+    <div class="modal-content">
+
+      <div class="modal-header text-warning border border-warning" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <h1>Create Post</h1>
+      </div>
+
+    <div class="modal-body border border-warning" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <section id="posts">
+        <form action="">
+            <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+          <div class="bootstrap-iso">
+
+            <div class="container ">
+              <div class="row">
+                  
+                <div class="pb-md-3 mt-sm-3 offset-1">
+              
+                  <form method="post">
+
+                    <div class="form-group">
+                      <label class="control-label requiredField text-warning" for="name">
+                          Post title
+                        <span class="asteriskField">*</span>
+                      </label>
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                         
+                        </div>
+                        <input class="form-control  border border-warning bg-dark" id="posting" name="name" placeholder="PostTitle" type="text"/>
+                      </div>
+                    </div>
+
+                    <div class="form-group ">
+                      <label class="control-label requiredField text-warning" for="description">
+                          Description
+                        <span class="asteriskField">*</span>
+                      </label>
+                      <textarea class="form-control border border-warning bg-dark" cols="40" id="description" name="description" placeholder="What does the code do" rows="10"></textarea>
+                    </div>
+
+                    <div class="form-group ">
+                      <label class="control-label text-warning " for="language">Language</label>
+                        <div class="input-group">
+                          <div class="input-group-addon">
+                          </div>
+                          <input class="form-control border border-warning bg-dark" id="language" name="language" placeholder="#javascript, #React" type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                      <label class="control-label requiredField text-warning" for="codearea">
+                        Code
+                        <span class="asteriskField">*</span>
+                      </label>
+                      <textarea class="form-control text-warning border border-warning bg-dark" cols="40" id="codearea" name="codearea" rows="10" placeholder="let awesome = {'DevStack'}"></textarea>
+                    </div>
+                    <div class="form-group"></div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="modal-footer justify-content-center border border-warning" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <input class="btn btn-warning " data-dismiss="modal"value="close">
+      <input id="newBtn" class="btn btn-warning" data-dismiss="modal"value="Submit">
+    </div>
+
+    </div>
+  </div>
+</div>
+
+            
+<footer class="bg-dark text-center text-warning pt-4 pb-4">
+  <p class="mb-0">{ ' DevStack ' } by Myles & Eduardo</p>
+</footer>
+
+</body> 
+</html>
+          
+          
+
