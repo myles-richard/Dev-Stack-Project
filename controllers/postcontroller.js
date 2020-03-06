@@ -50,6 +50,9 @@ const update = (req,res) => {
     db.Post.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatePost) => {
         if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'})
 
+
+
+        
         res.json(updatePost)
     })
 };
