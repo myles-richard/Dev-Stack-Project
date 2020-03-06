@@ -118,14 +118,14 @@ const newUsers = [
 // });
 
 // // EMBEDED REFRENCE BETWEEN POST AND USER
-User.findOne({name: 'Myles'}, (err,foundUser) =>{
-    Post.findOne({title: 'This is how you do a for require'}, (err, foundPost) => {
-        // console.log(foundUser, foundPost)
-        foundUser.posts.push(foundPost);
+// User.findOne({name: 'Myles'}, (err,foundUser) =>{
+//     Post.findOne({title: 'This is how you do a for require'}, (err, foundPost) => {
+//         // console.log(foundUser, foundPost)
+//         foundUser.posts.push(foundPost);
 
-        foundUser.save((err, savedUser) => {
-            console.log(savedUser)
-        })
-    })
-});
+//         foundUser.save((err, savedUser) => {
+//             console.log(savedUser)
+//         })
+//     })
+// });
 
