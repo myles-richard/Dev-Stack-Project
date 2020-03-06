@@ -5,7 +5,9 @@
     <meta name="viewport" 
     content="width=device-width, initial-scale=1.0">
     
+    <script src="https://kit.fontawesome.com/9b565a5476.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- form stuff -->
@@ -18,41 +20,45 @@
     <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
     <script defer src="scripts/mainPage.js"></script>
     <script defer src="scripts/createPost.js"></script>
     <!-- Main CSS -->
     <link rel="stylesheet" href="/styles/jsPosts.css">
-    <title>DecStack</title>
+    <title>JavaScript</title>
 </head>
 <header>
-    
-  <nav id="postcard" class="navbar navbar-expand-md pt-3 pb-3">
-        
-    <a class="navbar-brand text-warning" href="/">{ ' DevStack ' }</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon border border-warning"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ml-auto">
-        <li>
-          <form class="form-inline">
-              <input id="postcard" class="form-control mr-sm-2 border border-warning" type="search" placeholder="Search" aria-label="Search">
-            </form>
-        </li>
-        <li>    
-            <a class="btn btn-outline-warning my-2 my-sm-0 mr-2"href="#" data-toggle="modal" data-target="#myModal">Create Post</a>
-        </li>
-        <li>
-          <button class="btn btn-outline-warning my-2 my-sm-0 mr-2 p-2" type="submit"><i class="fas fa-search"></i></button>
-        </li>
-        <li>
-          <button class="btn btn-outline-warning my-2 my-sm-0 p-2" type="submit"><i class="fas fa-user"></i></button>
-        </li>
-      </ul>
-    </div>
  
+<nav id="postcard" class=" navbar navbar-expand-md pt-3 pb-3">
+        
+  <a class="navbar-brand text-warning" href="/">{ ' DevStack ' }</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li>
+        <a class="btn btn-outline-warning my-2 my-sm-0 mr-2"href="#" data-toggle="modal" data-target="#myModal">Create Post</a>
+      </li>
+      <li>
+        <form class="form-inline">
+            <input  class="form-control mr-sm-2 border border-warning" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </li>
+      <li>
+        <button class="btn btn-outline-warning my-2 my-sm-0 mr-2 p-2" type="submit"><i class="fas fa-search"></i></button>
+      </li>
+      <li>
+        <button class="btn btn-outline-warning my-2 my-sm-0 p-2" type="submit"><i class="fas fa-user"></i></button>
+      </li>
+    </ul>
+  </div>
+
 </nav>
+
+
+
 </header>
 
 <body class="" style="background-image: url('/images/login-background.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
@@ -333,7 +339,7 @@
                         <div class="input-group-addon">
                          
                         </div>
-                        <input class="form-control  border border-warning bg-dark" id="posting" name="name" placeholder="PostTitle" type="text"/>
+                        <input class="form-control  border border-warning bg-dark text-warning" id="posting" name="name" placeholder="PostTitle" type="text"/>
                       </div>
                     </div>
 
@@ -342,7 +348,7 @@
                           Description
                         <span class="asteriskField">*</span>
                       </label>
-                      <textarea class="form-control border border-warning bg-dark" cols="40" id="description" name="description" placeholder="What does the code do" rows="10"></textarea>
+                      <textarea class="form-control border border-warning bg-dark text-warning" cols="40" id="description" name="description" placeholder="What does the code do" rows="10"></textarea>
                     </div>
 
                     <div class="form-group ">
@@ -350,7 +356,7 @@
                         <div class="input-group">
                           <div class="input-group-addon">
                           </div>
-                          <input class="form-control border border-warning bg-dark" id="language" name="language" placeholder="#javascript, #React" type="text"/>
+                          <input class="form-control border border-warning bg-dark text-warning" id="language" name="language" placeholder="#javascript, #React" type="text"/>
                         </div>
                     </div>
 
@@ -380,12 +386,13 @@
     </div>
   </div>
 </div>
-            
+</body>     
+
 <footer class="bg-dark text-center text-warning pt-4 pb-4">
   <p class="mb-0">{ ' DevStack ' } by Myles & Eduardo</p>
 </footer>
 
-</body>
+
 </html>
           
           
