@@ -48,13 +48,25 @@ const create = (req,res) => {
 };
 
 const update = (req,res) => {
+    db.User.findOne({_id: req.session.user}, (err, foundUser) => { console.log(req.params)
+        const updatePosting = foundUser.posts.id(req.params.id);
+        console.log('user model', updatePosting)
+        // if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'})
+
+        updatePosting.title = req.body.title;
+        updatePosting.description = req.body.description;
+        updatePosting.languages = req.body.languages;
+        updatePosting.code = req.body.code;
+
+        foundUser.save()
+        // console.log(foundUser)
+    })
+    
+    
     db.Post.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatePost) => {
         if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'})
-
-
-
         
-        res.json(updatePost)
+         res.json(updatePost)
     })
 };
 
@@ -62,9 +74,9 @@ const destroy = (req,res) => {
     db.Post.findByIdAndDelete(req.params.id, (err, deletedPost) => {
         if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'});
 
-        res.json(deletedPost)
-    })
-}
+
+        res.json({status: 200}) })
+        }
 
 module.exports = {
     index,

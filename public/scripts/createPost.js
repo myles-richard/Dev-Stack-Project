@@ -38,18 +38,21 @@ function render(posts){
 }
 
 function getPostTemplate(post) {
-    return `
-    <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3"> 
-    <div class="card">
-        <div id="postcard" class="card-body border border-warning rounded">
-        <h5 class="card-title text-warning">${post.title}</h5>
-        <h6 class="card-subtitle mb-4 text-light">${post.name}</h6>
-        <p class="card-text text-warning">${post.description}</p>
-        
-        <button id="${post._id}" type="button" class="btn btn-outline-warning float-right">save</button>
-        </div>
-    </div>
-</div>
-    
+    return ` 
+<button type="button" class="btn col-sm-12 col-md-6 col-lg-3 col-xl-3 pb-md-3 mt-sm-3" data-toggle="modal" data-target="#kesha">
+        <div class="container ">
+
+                    <!--Button trigger modal -->
+            <div class=""> 
+              <div class="card ">
+                  <div id="postcard" class="card-body border border-warning rounded ">
+                  <h5 class="card-title text-warning">${post.title}</h5>
+                  <h6 class="card-subtitle mb-4 text-light">${post.name}</h6>
+                  <p class="card-text text-warning">${post.description}</p>
+                  <div>
+              </div>
+            </div>
+          </div>
+      </button>
     `;
 }
