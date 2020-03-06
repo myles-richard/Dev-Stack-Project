@@ -19,7 +19,7 @@ function createPost(e){
     const newPost = {title, description, languages, code };
 
     
-fetch('http://localhost:4000/api/v1/posts/create', {
+fetch('/api/v1/posts/create', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
