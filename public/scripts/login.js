@@ -23,3 +23,7 @@ document.querySelector('form').addEventListener('submit',(event)=>{
   
 
 });
+
+document.getElementById('create').addEventListener('click', (event) => {
+    window.location = 'http://localhost:4000/createUser'
+})
