@@ -19,29 +19,7 @@ function createPost(e){
     const newPost = {title, description, languages, code };
 
     
-//     // const description = document.querySelector('#description').value
-//     // console.log(description);
-    
-//     // const language = document.querySelector('#language').value
-//     // console.log(language);
-    
-//     // const code = document.querySelector('#codearea').value
-//     // console.log(code);
-    
-//     // console.log(code);
-    
-//     // const newPost = {title, description, language, code}
-// //     fetch('/api/posts', {
-// //         method: 'POST',
-// //         headers: {
-// //             'Content-Type': 'application/JSON'
-// //         },
-// //         body: JSON.stringify(newPost)
-// //     })
-// //     .then(stream => stream.json())
-// //     .then(res => render(res))
-// // }
-fetch('/api/v1/posts/create', {
+fetch('http://localhost:4000/api/v1/posts/create', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -68,7 +46,7 @@ function getPostTemplate(post) {
         <h6 class="card-subtitle mb-4 text-light">${post.name}</h6>
         <p class="card-text text-warning">${post.description}</p>
         
-        <button type="button" class="btn btn-outline-warning float-right">save</button>
+        <button id="${post._id}" type="button" class="btn btn-outline-warning float-right">save</button>
         </div>
     </div>
 </div>

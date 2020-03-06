@@ -39,6 +39,7 @@ const create = (req,res) => {
                     name: foundUser.name                    
                 };
                 console.log(resObj);
+                console.log(resObj._id.value)
                 res.json(resObj)
             })
         })
