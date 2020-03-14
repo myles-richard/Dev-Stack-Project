@@ -9,3 +9,6 @@ body{
 #myModal {
    z-index: 1000000;
 }
+.card {
+    background-color: black;
+}

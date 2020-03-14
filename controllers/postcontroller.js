@@ -9,7 +9,6 @@ const index = (req,res) => {
 };
 
 const show = (req,res) => {
-    // db.User.findById(req.session.user)
     db.Post.findById(req.params.id, (err, foundPost) => {
         if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'});
 
@@ -48,18 +47,16 @@ const create = (req,res) => {
 };
 
 const update = (req,res) => {
-    db.User.findOne({_id: req.session.user}, (err, foundUser) => { console.log(req.params)
+    db.User.findOne({_id: req.session.user}, (err, foundUser) => { 
+        if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'});
         const updatePosting = foundUser.posts.id(req.params.id);
-        console.log('user model', updatePosting)
-        // if(err) return res.status(400).json({status: 400, error: 'Something went wrong please try again'})
-
+        
         updatePosting.title = req.body.title;
         updatePosting.description = req.body.description;
         updatePosting.languages = req.body.languages;
         updatePosting.code = req.body.code;
 
         foundUser.save()
-        // console.log(foundUser)
     })
     
     

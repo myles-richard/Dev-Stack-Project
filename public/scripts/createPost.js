@@ -1,24 +1,16 @@
 
-console.log("sanity check");
 const postsContainer = document.querySelector('#postlist');
 document.getElementById('newBtn').addEventListener('click', createPost);
-
 
 function createPost(e){
     e.preventDefault()
     
-    const title = document.querySelector('#posting').value
-    console.log(title)
-    const description = document.querySelector('#description').value
-    console.log(description)
-    const languages = document.querySelector('#language').value
-    console.log(languages)
-    const code = document.querySelector('#codearea').value
-    console.log(code)
-    
+    const title = document.querySelector('#posting').value;
+    const description = document.querySelector('#description').value;
+    const languages = document.querySelector('#language').value;
+    const code = document.querySelector('#codearea').value;
     const newPost = {title, description, languages, code };
 
-    
 fetch('/api/v1/posts/create', {
     method: 'POST',
     headers: {
@@ -31,7 +23,6 @@ fetch('/api/v1/posts/create', {
 }
 
 function render(posts){
-    console.log(posts)
     
     const postTemplate = getPostTemplate(posts);
     postsContainer.insertAdjacentHTML('beforeend', postTemplate)

@@ -1,7 +1,6 @@
-console.log("hello");
 
 const form = document.querySelector('#new-form')
-console.log(form);
+
 const create = document.getElementById('createPost')
 
 form.addEventListener('submit', handleSubmit)
@@ -24,28 +23,17 @@ const password = document.getElementById('password')
 const nameFeedback = document.querySelector('.name-feedback')
 const emailFeedback = document.querySelector('.email-feedback')
 const passwordFeedback = document.querySelector('.password-feedback')
-// const locationFeedback = document.querySelector('.location-feedback')
-// const githubFeedback = document.querySelector('.github-feedback')
-// const workFeedback = document.querySelector('.work-feedback')
-// const languageFeedback = document.querySelector('.language-feedback')
 
-// reset validation classes and errors 
 
 name.classList.remove('is-invalid');
 email.classList.remove('is-invalid');
 password.classList.remove('is-invalid');
-// location.classList.remove('is-invalid');
-// github.classList.remove('is-invalid');
-// work.classList.remove('is-invalid');
-// language.classList.remove('is-invalid');
+
 
 nameFeedback && nameFeedback.remove();
 emailFeedback && emailFeedback.remove();
 passwordFeedback && passwordFeedback.remove();
-// locationFeedback && locationFeedback.remove();
-// githubFeedback && githubFeedback.remove();
-// workFeedback && workFeedback.remove();
-// languageFeedback && languageFeedback.remove();
+
 
 
 
@@ -89,7 +77,6 @@ if(formIsValid){
         github: github.value, 
         work: work.value,
         languages: language.value,
-        // password: 1234
     }
     console.log(newUser);
 

@@ -1,4 +1,3 @@
-console.log('SANIT CHECK')
 
 document.querySelector('form').addEventListener('submit',(event)=>{
    event.preventDefault()

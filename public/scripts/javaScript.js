@@ -1,8 +1,8 @@
-console.log('hello')
 let clickedId;
+
+//get post from DB
 fetch('/api/v1/posts')
 .then( (data) => {
-    console.log(data);
     return data.json()
 })
 .catch(err => console.log(err))
@@ -26,7 +26,7 @@ fetch('/api/v1/posts')
       </button>
       `
     })
-    document.querySelector('#editpost').addEventListener('click', () => console.log('hi'));
+    document.querySelector('#editpost').addEventListener('click', ()=> console.log('hi'));
     addDeleteListener();
 }
 )
@@ -35,7 +35,6 @@ document.querySelector('#postlist').addEventListener('click', (event) => {
    if(event.target.classList.contains('clickpost')){
    console.log(event.target.dataset.id)
    clickedId = event.target.dataset.id
-   console.log('beep')
        fetch(`/api/v1/posts/${event.target.dataset.id}`, {
            method: 'get',
            headers: {
@@ -52,9 +51,29 @@ document.querySelector('#postlist').addEventListener('click', (event) => {
     }
 });
 
+// function editPostListener() {
+//     if(event.target.classList.contains('clickpost')){
+//         console.log(event.target.dataset.id)
+//         clickedId = event.target.dataset.id
+//             fetch(`/api/v1/posts/${clickedId}`, {
+//                 method: 'get',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//             })
+//             .then(stream => stream.json())
+//             .then(data =>{
+//                 document.getElementById('post-title').innerText = data.title.value
+//                 document.getElementById('post-description').innerText = data.description.value
+//                 document.getElementById('post-code').innerHTML = data.code.value
+//             })
+//             .catch(err => console.log(err))
+//          }
+// }
+
 function addDeleteListener() {
     document.getElementById('deletepost').addEventListener('click', (event)=> {
-        console.log('yeet')
+        
         fetch(`/api/v1/posts/${clickedId}`, {
             method: 'DELETE',
             headers: {
@@ -63,6 +82,10 @@ function addDeleteListener() {
 
         })
         .then(stream => stream.json())
-        .then(data => console.log(data))
+        .then(data => {
+            if (data.status === 200) {
+                window.location = '/javascript'
+            }
+        })
     })
 }
